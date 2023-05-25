@@ -36,7 +36,7 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g @angular/cli
+          npm install -g @angular/cli@latest
           ng generate component select-batch-for-indent-item
           ng generate component show-indent-batch-details
           npm install typescript@2.7.2 --save-dev
