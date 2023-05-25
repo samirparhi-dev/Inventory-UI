@@ -41,8 +41,7 @@ jobs:
           npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
           npm install --legacy-peer-deps
-          npm ci
-          mvn clean install
+          mvn clean install -U
           
           
       - name: Perform CodeQL Analysis
