@@ -38,10 +38,9 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g @angular/cli@16.0.2
+          npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
-          npm install --force
-          npm run build
+          npm install --legacy-peer-deps
           mvn clean install
           
           
@@ -59,5 +58,5 @@ jobs:
         uses: actions/upload-artifact@v2 
         with:
              name: Inventory-UI
-             path: target 
+             path: target/inventory-ui-v1.0.war 
              
