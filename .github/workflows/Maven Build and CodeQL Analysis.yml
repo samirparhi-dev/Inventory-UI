@@ -40,7 +40,7 @@ jobs:
           ng generate component select-batch-for-indent-item
           ng generate component show-indent-batch-details
           npm install typescript@2.7.2 --save-dev
-          npm install
+          npm install --force
           npm run build
           mvn clean install
           
