@@ -33,12 +33,12 @@ jobs:
         with:
           node-version: 14
           
+          #ng generate component select-batch-for-indent-item
+          #ng generate component show-indent-batch-details
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g @angular/cli@latest
-          ng generate component select-batch-for-indent-item
-          ng generate component show-indent-batch-details
+          npm install -g @angular/cli@16.0.2
           npm install typescript@2.7.2 --save-dev
           npm install --force
           npm run build
