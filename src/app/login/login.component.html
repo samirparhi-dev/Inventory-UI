@@ -1,0 +1,48 @@
+<div class="container-fluid" style="margin-top: 60px;">
+  <form (ngSubmit)="f.form.valid && login()" #f="ngForm">
+    <md-card class="mdCard">
+      <md-card-title class="mdTitle">
+        <div>
+          <img src="assets/images/Swasthya.png" alt="Logo">
+        </div>
+      </md-card-title>
+      <md-card-content class="mdContent">
+        <div class="row no-gutters">
+          <div class="col-xs-1 col-md-1 col-sm-1">
+            <span class="material-icons formIcons">account_box</span>
+          </div>
+          <div class="col-xs-11 col-md-11 col-sm-11">
+            <md-input-container class="full-width">
+              <input autocomplete="off" allowText="usernameValidator" autofocus="autofocus" mdInput type="text" id="userID" placeholder="Enter User Name" [(ngModel)]="userName" name="userName" />
+            </md-input-container>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 col-md-1 col-sm-1">
+            <span class="material-icons formIcons">lock</span>
+          </div>
+          <div class="col-xs-11 col-md-11 col-sm-11">
+            <md-input-container class="full-width">
+              <input autocomplete="off" mdInput [type]="dynamictype" id="password" placeholder="Enter Password" [(ngModel)]="password" name="password" />
+              <md-icon mdSuffix class="mat-icon material-icons cursorPointer" role="img" aria-hidden="true" mdTooltip="Show Password" (mousedown)='showPWD()' (touchstart)='showPWD()' (mouseup)='hidePWD()' (touchend)='showPWD()' style="color:gray">visibility</md-icon>
+            </md-input-container>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button md-raised-button color="primary" type="submit" class="btn-full-width">Login</button>
+          </div>
+        </div>
+        <div class="row m-t-25 m-b-10">
+          <div class="col-xs-12 col-sm-3"></div>
+          <div class="col-xs-12 col-sm-9">
+            <a class="cursorPointer f-c-54 font-regular pull-right" routerLink="/reset-password">Forgot Password?</a>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+  </form>
+
+</div>
+
+<app-footer></app-footer>
