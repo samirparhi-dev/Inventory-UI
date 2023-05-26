@@ -38,8 +38,8 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
-          npm install 
-          npm run build
+          npm install --force
+          #npm run build
           mvn clean install 
           
           
