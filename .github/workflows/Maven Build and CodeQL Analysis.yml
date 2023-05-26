@@ -37,10 +37,7 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g renovate
-          renovate --platform npm
-          renovate --platform maven
-          npm install
+          npm install --force
           mvn clean install
           
           
