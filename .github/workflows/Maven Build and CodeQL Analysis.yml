@@ -31,18 +31,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
           
           #ng generate component select-batch-for-indent-item
           #ng generate component show-indent-batch-details
 
       - name: Build with NPM and Maven
         run: |
-          
-          npm install --legacy-peer-deps
           npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
-          mvn clean install -U
+          npm install --legacy-peer-deps
+          npm run build
+          mvn clean install 
           
           
       - name: Perform CodeQL Analysis
