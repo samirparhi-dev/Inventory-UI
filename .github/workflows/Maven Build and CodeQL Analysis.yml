@@ -38,7 +38,7 @@ jobs:
       - name: Build with NPM and Maven
         run: |
           npm install -g @angular/cli
-          npm install @angular/common@5.2.11
+        
           npm install typescript@2.7.2 --save-dev
           npm update
           npm rebuild node-sass
