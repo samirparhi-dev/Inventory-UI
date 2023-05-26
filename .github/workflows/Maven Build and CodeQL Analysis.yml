@@ -32,13 +32,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 10
+          node-version: 9
           
 
       - name: Build with NPM and Maven
         run: |
           npm install --force
-          mvn clean install 
+          mvn package
           
           
       - name: Perform CodeQL Analysis
