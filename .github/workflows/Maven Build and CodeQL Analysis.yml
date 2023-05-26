@@ -32,12 +32,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 18
           
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g renovate@35.101.0
+          npm install -g renovate
           renovate --platform npm
           renovate --platform maven
           npm install
