@@ -40,8 +40,8 @@ jobs:
           npm install typescript@2.7.2 --save-dev
           npm install node-sass@latest
           npm install --force
-          npm run build
-          mvn install 
+          #npm run build
+          mvn clean install 
           
           
       - name: Perform CodeQL Analysis
