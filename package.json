@@ -15,7 +15,7 @@
     "e2e": "ng e2e",
     "electron": "electron .",
     "electron-build": "ng build --prod && electron .",
-    "build-dev": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --prod --aot",
+    "build-dev": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build ",
     "war": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --prod --aot && grunt",
     "build-test": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build -e test --aot"
   },
