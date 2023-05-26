@@ -37,11 +37,11 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-          npm install -g renovate
+          npm install -g renovate@35.101.0
           renovate --platform npm
           renovate --platform maven
-          npm ci
-          mvn package
+          npm install
+          mvn clean install
           
           
       - name: Perform CodeQL Analysis
