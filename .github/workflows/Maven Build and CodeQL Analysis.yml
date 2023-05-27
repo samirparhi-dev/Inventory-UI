@@ -38,7 +38,7 @@ jobs:
       - name: Build with NPM and Maven
         run: |
           npm install -g @angular/cli
-          ng update @angular/core
+          sudo npm install -y @ngtools/webpack@latest
           npm install typescript@2.7.2 --save-dev
           npm install node-sass --force
           npm config set legacy-peer-deps true
