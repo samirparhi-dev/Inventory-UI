@@ -40,6 +40,8 @@ jobs:
           npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
           npm install node-sass --force
+          ng generate component indent/indent-order-worklist/main-store-indent-order-worklist/indent-dispenses/manual-indent-dispense/select-batch-for-indent-item
+
           npm config set legacy-peer-deps true
           npm install --force
           npm run build
