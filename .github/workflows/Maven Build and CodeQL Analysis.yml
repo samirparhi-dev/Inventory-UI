@@ -39,6 +39,7 @@ jobs:
         run: |
           #npm install typescript@2.7.2 --save-dev
           npm config set legacy-peer-deps true
+          npm install node-sass --force
           npm install --force
           mvn clean install
           
