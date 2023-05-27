@@ -37,11 +37,11 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-          #npm install typescript@2.7.2 --save-dev
           npm config set legacy-peer-deps true
-          npm install node-sass --force
-          npm install ngtools/webpack
           npm install --force
+          npm install typescript@2.7.2 --save-dev
+          npm install angular/common
+          npm install node-sass --force
           mvn clean install
           
           
