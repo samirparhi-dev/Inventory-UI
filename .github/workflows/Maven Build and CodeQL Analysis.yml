@@ -32,7 +32,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18
+          node-version: 10
           
 
       - name: Build with NPM and Maven
@@ -40,6 +40,7 @@ jobs:
           #npm install typescript@2.7.2 --save-dev
           npm config set legacy-peer-deps true
           npm install node-sass --force
+          npm install ngtools/webpack@latest
           npm install --force
           mvn clean install
           
