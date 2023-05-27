@@ -38,13 +38,13 @@ jobs:
       - name: Build with NPM and Maven
         run: |
           npm install -g @angular/cli
-          sudo npm install -y @ngtools/webpack@latest
           npm install typescript@2.7.2 --save-dev
           npm install node-sass --force
           npm config set legacy-peer-deps true
           npm install --force
-         
+          npm run build
           mvn clean install
+          
           
           
       - name: Perform CodeQL Analysis
