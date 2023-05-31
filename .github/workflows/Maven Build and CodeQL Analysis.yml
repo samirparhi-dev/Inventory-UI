@@ -32,18 +32,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 8.9.0
           
 
       - name: Build with NPM and Maven
         run: |
           npm config set legacy-peer-deps true
-          npm install -g @angular/cli
+          npm install @angular/cli@1.7.0
           npm install typescript@2.7.2 --save-dev
-          
-          npm install --force
+          npm install 
           npm run build
-          #mvn clean install
+          mvn clean install
           
           
           
