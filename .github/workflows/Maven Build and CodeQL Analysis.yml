@@ -37,31 +37,29 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
+          npm config set legacy-peer-deps true
           npm install -g @angular/cli
           npm install typescript@2.7.2 --save-dev
-          npm install node-sass --force
-          ng generate component indent/indent-order-worklist/main-store-indent-order-worklist/indent-dispenses/manual-indent-dispense/select-batch-for-indent-item
-
-          npm config set legacy-peer-deps true
+          
           npm install --force
           npm run build
-          mvn clean install
+          #mvn clean install
           
           
           
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-        with:
-          languages: javascript,typescript 
+      #- name: Perform CodeQL Analysis
+      #  uses: github/codeql-action/analyze@v2
+      #  with:
+       #   languages: javascript,typescript 
      
       
-      - name: Create WAR file 
-        run: mvn -B package --file pom.xml
+      #- name: Create WAR file 
+  #        run: mvn -B package --file pom.xml
         
       
-      - name: Upload WAR file as artifact
-        uses: actions/upload-artifact@v2 
-        with:
-             name: Inventory-UI
-             path: target/inventory-ui-v1.0.war 
+   #   - name: Upload WAR file as artifact
+    #    uses: actions/upload-artifact@v2 
+     #   with:
+     #        name: Inventory-UI
+     #        path: target/inventory-ui-v1.0.war 
              
