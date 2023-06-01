@@ -34,15 +34,6 @@ jobs:
         with:
           node-version: 16
     
-          
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-              ${{ runner.os }}-node-
-   
 
       - name: Build with NPM and Maven
         run: |
@@ -55,30 +46,20 @@ jobs:
               npm run build
               mvn clean install
           
-        #sudo yarn global add  @angular/cli
-              #sudo yarn global add  @angular/common
-              #sudo yarn add typescript@2.7.2 
-              #sudo yarn add node-sass --force
-              #sudo yarn install --force
-              #sudo  yarn run build 
-              #sudo mvn clean install -B
-              
-  
         
-            
-      #- name: Perform CodeQL Analysis
-      #  uses: github/codeql-action/analyze@v2
-      #  with:
-       #   languages: javascript,typescript 
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          languages: javascript,typescript 
      
       
-      #- name: Create WAR file 
-  #        run: mvn -B package --file pom.xml
+      - name: Create WAR file 
+        run: mvn -B package --file pom.xml
         
       
-   #   - name: Upload WAR file as artifact
-    #    uses: actions/upload-artifact@v2 
-     #   with:
-     #        name: Inventory-UI
-     #        path: target/inventory-ui-v1.0.war 
+      - name: Upload WAR file as artifact
+        uses: actions/upload-artifact@v2 
+        with:
+          name: Inventory-UI
+          path: target/inventory-ui-v1.0.war 
              
