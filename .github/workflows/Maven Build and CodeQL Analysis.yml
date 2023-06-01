@@ -38,6 +38,7 @@ jobs:
       - name: Build with NPM and Maven
         run: |
               sudo yarn global add  @angular/cli
+              sudo yarn add typescript@2.7.2 
               sudo yarn add node-sass --force
               sudo yarn install --force
               sudo  yarn run build 
@@ -46,7 +47,7 @@ jobs:
     #
            #   yarn global add angular/common
             #  
-             # yarn add typescript@2.7.2 --save-dev
+             # --save-dev
               #yarn add ng2-smart-table@1.2.1
           
      #npm config set legacy-peer-deps true
