@@ -37,12 +37,13 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
+              sudo yarn global add  @angular/cli
               sudo yarn add node-sass --force
               sudo yarn install --force
               sudo  yarn run build 
               sudo mvn clean install -B
               
-    #yarn global add  angular/cli
+    #
            #   yarn global add angular/common
             #  
              # yarn add typescript@2.7.2 --save-dev
