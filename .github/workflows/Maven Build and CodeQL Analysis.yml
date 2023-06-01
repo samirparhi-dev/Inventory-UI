@@ -37,10 +37,12 @@ jobs:
 
       - name: Build with NPM and Maven
         run: |
-              yarn install --force
+              yarn add angular/cli@1.7.0
+              yarn add angular/common@4.2.4
               yarn add node-sass --force
               yarn add typescript@2.7.2 --save-dev
               yarn add ng2-smart-table@1.2.1
+              yarn install --force
               yarn run build 
               mvn clean install
          
