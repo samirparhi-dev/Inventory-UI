@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<!-- @Author : Sunil K Sundaram @Date : 21-May-17 @Email : sunil.ks@gmail.com -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.iemr.inventoryui</groupId>
 	<artifactId>inventory-ui</artifactId>
@@ -48,7 +47,6 @@
 		</profile>
 	</profiles>
 	
-	<!-- we could create individual properties similar to variables -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<final-name>inventoryui-v1.0</final-name>
@@ -65,7 +63,6 @@
 		<server-port>{port-${environment}}</server-port>
 	</properties>
 	
-	<!-- install the necessary node_modules & compile in prod mode -->
 	<build>
 		<finalName>inventory-ui-v1.0</finalName>
 		<plugins>
@@ -76,9 +73,6 @@
 					<filesets>
 						<fileset>
 							<directory>dist</directory>
-							<!-- if any that needs to be included or excluded -->
-							<!-- using name in both would be a crime - pls avoid! -->
-							<!-- <includes><include>**/*.tmp</include><include>**/*.log</include></includes><excludes><exclude>**/important.log</exclude><exclude>**/another-important.log</exclude></excludes> -->
 							<followSymlinks>false</followSymlinks>
 						</fileset>
 					</filesets>
@@ -159,7 +153,6 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<webResources>
 						<resource>
-							<!-- this is relative to the pom.xml directory -->
 							<directory>dist</directory>
 						</resource>
 						<resource>		
@@ -193,27 +186,7 @@
 					</execution>
 				</executions>
 			</plugin>
-		<!--	<plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.2.1.Final</version>
-				<configuration>
-					<id>${server-id}</id>
-					<hostname>$${server-hostname}</hostname>
-					<port>$${server-port}</port>
-					<username>admin</username>
-					<password>ad@min123</password>
 
-				</configuration>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin> -->
 		</plugins>
 	</build>
 </project>
