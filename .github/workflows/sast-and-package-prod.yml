@@ -62,5 +62,5 @@ jobs:
       uses: actions/upload-artifact@v2 
       with:
         name: Inventory-UI
-        path: target/inventory-ui-v1.0.war   
+        path: target/inventoryui-v1.0.war   
         
