@@ -1,7 +1,7 @@
 name: Static Code Analysis and Package Prod
 on:
   push:
-    branches: [ "master"]
+    branches: [ "master","develop"]
     
 jobs:
   SAST-and-Package-Prod:
@@ -61,6 +61,6 @@ jobs:
     - name: Upload WAR file as artifact
       uses: actions/upload-artifact@v2 
       with:
-        name: HWC-UI
-        path: target/tmui-v1.0.war  
+        name: Inventory-UI
+        path: target/inventory-ui-v1.0.war   
         
